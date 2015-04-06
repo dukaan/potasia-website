@@ -1,49 +1,111 @@
 <!DOCTYPE html>
 <html>
 <head>
+
  <title>Potasia Website</title>
  <link rel="stylesheet" type="text/css" href="style.css">
+
+ <script src="scripts/jquery-1.11.2.min.js"></script>
+ <script src="scripts/script.js"></script>
+ <script src="scripts/parallax.min.js"></script>
+
 </head>
 
 <body>
 
-	<!-- header background with logo -->
+	<!-- parallax background container -->
+	<div id="background" class="parallax-window" data-parallax="scroll" data-image-src="header_background.jpg"></div>
+
+	<!-- header container -->
 	<div id="header">
-		<div id="overlay">
-			<div id="logo">
-				<div id="logo-image-div"><img id="logo-image" src="potato.png" /></div>
-				<div id="logo-caption">
-					<span id="potasia-title">POTASIA</span>
-					<div id="separator"></div>
-					<span id="subtitle">baked potato meets asia<span>
+				<div id="overlay">
+					<div id="logo">
+						<div id="logo-image-div"><img id="logo-image" src="potato.png" /></div>
+						<div id="logo-caption">
+							<span id="potasia-title">POTASIA</span>
+							<div id="separator"></div>
+							<span id="subtitle">baked potato meets asia</span>
+						</div>
+					</div>
+
+					<button id="down-arrow-button" class="icon-button"></button>
 				</div>
+	</div>
+
+	<!-- navigation bar container -->
+	<div id="navigation">
+				<div id="nav-title-container">
+					<img id="logo-small" src="potato.png" />
+					<div id="nav-title">
+						POTASIA
+					</div>
+				</div>
+				<div class="nav-links">
+					<a class="nav-link" href="#">HOME</a>
+					<a class="nav-link" href="#">MENU</a>
+					<a class="nav-link" href="#">LOCATION</a>
+					<a class="nav-link" href="#">CONTACT</a>
+				</div>
+				<div class="h-divider"></div>
+				<button id="fb-button" class="icon-button"></button>
+	</div>
+
+	<!-- content container -->
+	<div id="content-wrapper">
+		<div class="left-content">
+			<div class="content-title">
+				WAS IST
+				<p>
+				POTASIA?
+				</p>
 			</div>
+		</div>
+
+		<div class="right-content">
+			In die Kartoffeln mit einen scharfen Messer in einem Abstand von ca. 1/2 cm (oder weniger) Scheiben schneiden, sodass die Kartoffeln danach aussehen wie ein Akkordeon. Damit man nicht zu tief in die Kartoffeln schneidet, gibt es folgenden Trick: Beim Schneiden vor und hinter die Kartoffel ein Stäbchen legen – das stoppt das Messer und verhindert ein Durchschneiden!
+
+			<p>
+			In einer kleinen Schüssel etwas feines und grobes Meersalz, frischen Pfeffer und Olivenöl vermengen. Mit einem Pinsel diese Mischung auf die Kartoffeln streicheln und ein wenig zwischen die Scheiben pinseln. Für ein besonderes Aroma habe ich noch ein paar frische Rosmarin-Zweige in die Kartoffeln gesteckt.
+			</p>
 		</div>
 	</div>
 
-	<!-- navigation bar -->
-	<div id="navigation">
-		<a class="nav-link" href="#">HOME</a>
-		<a class="nav-link" href="#">MENU</a>
-		<a class="nav-link" href="#">LOCATION</a>
-		<a class="nav-link" href="#">CONTACT</a>
+	<!-- footer container -->
+	<div id="footer-wrapper">
+		<div class="v-divider"></div>s
+		<div id="footer-content">
+			<table id="footer-table">
+				<tr>
+					<td rowspan="2" id="footer-logo">
+						<img id="footer-logo-img" src="potato.png" /> <br/>
+						POTASIA
+					</td>
+					<td valign="top" class="col-contact">
+						<span class="footer-table-title">KONTAKT</span> <br/>
+					</td>
+					<td valign="top" class="col-times">
+						<span class="footer-table-title"> &Ouml;FFNUNGSZEITEN</span>
+					</td>
+					<td valign="top">
+						<button id="footer-insta-btn" class="icon-button"></button>
+					</td>
+				</tr>
+				<tr>
+					<td valign="bottom" class="col-contact">
+						Tel. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1234 / 57 890 <br/>
+						E-Mail &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; potasia@online.de
+					</td>
+					<td valign="bottom" class="col-times">
+						Mo - Do &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11.00 - 21.00 <br/>
+						Fr - So &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11.00 - 24.00
+					</td>
+					<td valign="bottom">
+						<button id="footer-fb-btn" class="icon-button"></button>
+					</td>
+				</tr>
+			</table>
+		</div>
 	</div>
-
-	<div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-
-In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
-
-Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.
-
-Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui.
-
-Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing.
-
-Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus. Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis. Etiam imperdiet imperdiet orci. Nunc nec neque.
-
-Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu. Phasellus accumsan cursus velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci.
-
-Phasellus consectetuer vestibulum elit. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla pede sit amet augue. In turpis. Pellentesque posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Nullam sagittis. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce id purus. Ut varius tincidunt libero. Phasellus dolor. Maecenas vestibulum mollis</div>
 
 </body>
 
