@@ -7,20 +7,24 @@
 
  <script src="scripts/jquery-1.11.2.min.js"></script>
  <script src="scripts/script.js"></script>
+
+ <!--  external libraries for parallax wallpaper and slideshow -->
  <script src="scripts/parallax.min.js"></script>
+ <script type="text/javascript" src="scripts/jssor.js"></script>
+ <script type="text/javascript" src="scripts/jssor.slider.js"></script>
 
 </head>
 
 <body>
 
 	<!-- parallax background container -->
-	<div id="background" class="parallax-window" data-parallax="scroll" data-image-src="header_background.jpg"></div>
+	<div id="background" class="parallax-window" data-parallax="scroll" data-image-src="img/header_background.jpg"></div>
 
-	<!-- header container -->
+	<!-- header/starting page container -->
 	<div id="header">
-				<div id="overlay">
+				<div class="overlay">
 					<div id="logo">
-						<div id="logo-image-div"><img id="logo-image" src="potato.png" /></div>
+						<div id="logo-image-div"><img id="logo-image" src="img/potato.png" /></div>
 						<div id="logo-caption">
 							<span id="potasia-title">POTASIA</span>
 							<div id="separator"></div>
@@ -34,50 +38,115 @@
 
 	<!-- navigation bar container -->
 	<div id="navigation">
-				<div id="nav-title-container">
-					<img id="logo-small" src="potato.png" />
-					<div id="nav-title">
-						POTASIA
-					</div>
-				</div>
-				<div class="nav-links">
-					<a class="nav-link" href="#">HOME</a>
-					<a class="nav-link" href="#">MENU</a>
-					<a class="nav-link" href="#">LOCATION</a>
-					<a class="nav-link" href="#">CONTACT</a>
-				</div>
-				<div class="h-divider"></div>
-				<button id="fb-button" class="icon-button"></button>
+		<div id="nav-title-container">
+			<img id="logo-small" src="img/potato.png" />
+			<div id="nav-title">
+				POTASIA
+			</div>
+		</div>
+		<div class="nav-links">
+			<a href="index.html#content"><div class="link-container active"><table valign="center" class="link-wrapper-table"><tr><td><a class="nav-link" href="index.html#content">HOME</a></td></tr></table><div class="arrow-down on"></div></div></a><!--
+			--><a href="menu.html"><div class="link-container"><table valign="center" class="link-wrapper-table"><tr><td><a class="nav-link" href="menu.html">MENU</a></td></tr></table><div class="arrow-down"></div></div></a><!--
+			--><a href="#"><div class="link-container"><table valign="center" class="link-wrapper-table"><tr><td><a class="nav-link" href="#">GALLERY</a></td></tr></table><div class="arrow-down"></div></div></a><!--
+			--><a href="#"><div class="link-container"><table valign="center" class="link-wrapper-table"><tr><td><a class="nav-link" href="#">CONTACT</a></td></tr></table><div class="arrow-down"></div></div></a>
+		</div>
+		<div class="h-divider"></div>
+		<button id="fb-button" class="icon-button"></button>
 	</div>
 
 	<!-- content container -->
+	<a name="content"></a>
 	<div id="content-wrapper">
-		<div class="left-content">
-			<div class="content-title">
-				WAS IST
-				<p>
-				POTASIA?
-				</p>
-			</div>
-		</div>
+		<table class="content-table" cellspacing="0">
+			<tr>
+				<td class="left-content-table" valign="top">
+					<div class="content-title">
+						WAS IST
+						<p>
+						POTASIA?
+						</p>
+					</div>
+				</td>
+				<td class="right-content-table last-right-content">
+					<div class="content-text">
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
 
-		<div class="right-content">
-			In die Kartoffeln mit einen scharfen Messer in einem Abstand von ca. 1/2 cm (oder weniger) Scheiben schneiden, sodass die Kartoffeln danach aussehen wie ein Akkordeon. Damit man nicht zu tief in die Kartoffeln schneidet, gibt es folgenden Trick: Beim Schneiden vor und hinter die Kartoffel ein Stäbchen legen – das stoppt das Messer und verhindert ein Durchschneiden!
+						<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
 
-			<p>
-			In einer kleinen Schüssel etwas feines und grobes Meersalz, frischen Pfeffer und Olivenöl vermengen. Mit einem Pinsel diese Mischung auf die Kartoffeln streicheln und ein wenig zwischen die Scheiben pinseln. Für ein besonderes Aroma habe ich noch ein paar frische Rosmarin-Zweige in die Kartoffeln gesteckt.
-			</p>
-		</div>
+						<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. </p>
+					</div>
+				</td>
+			</tr>
+		</table>
 	</div>
 
+	<!-- slideshow container realised with jssor slideshow -->
+	<div id="slideshow-wrapper">
+	    	<div id="slideshow-container">
+		        <!-- Slides Container -->
+		        <div id="slides-container" u="slides">
+		            <div>	          
+		            	<img u="image" src="img/gallery/image1.jpg" />
+		            	<table class="wrapper-table" valign="center"><tr><td>
+		            		<div class="slide-overlay"></div>
+			            	<div class="gallery-descriptor-box">
+			            		<table class="gallery-descriptor" valign="center"><tr><td>
+									LOREM ET IPSUM
+									<p></p>
+									<span class="gallery-subtitle">consetetur sadipscing elitr <br />
+									sed diam nonumy eirmod</span>
+			            		</td></tr></table>
+			            	</div>
+		            	</td></tr></table>
+		            </div>
+		            <div>
+		            	<img u="image" src="img/gallery/image2.jpg" />
+		            	<table class="wrapper-table" valign="center"><tr><td>
+		            		<div class="slide-overlay"></div>
+			            	<div class="gallery-descriptor-box">
+			            		<table class="gallery-descriptor" valign="center"><tr><td>
+									LOREM ET IPSUM
+									<p></p>
+									<span class="gallery-subtitle">consetetur sadipscing elitr <br />
+									sed diam nonumy eirmod</span>
+			            		</td></tr></table>
+			            	</div>
+		            	</td></tr></table>
+		            </div>
+		            <div>
+		            	<img u="image" src="img/gallery/image3.jpg" />
+		            	<table class="wrapper-table" valign="center"><tr><td>
+		            		<div class="slide-overlay"></div>
+			            	<div class="gallery-descriptor-box">
+			            		<table class="gallery-descriptor" valign="center"><tr><td>
+									LOREM ET IPSUM
+									<p></p>
+									<span class="gallery-subtitle">consetetur sadipscing elitr <br />
+									sed diam nonumy eirmod</span>
+			            		</td></tr></table>
+			            	</div>
+		            	</td></tr></table>
+		            </div>
+		        </div>
+
+		        <!-- Arrow Left -->
+		        <span u="arrowleft" class="jssora13l" style="top: 123px; left: 30px;">
+		        </span>
+		        <!-- Arrow Right -->
+		        <span u="arrowright" class="jssora13r" style="top: 123px; right: 30px;">
+		        </span>
+
+		    </div>
+	    </div>
+
 	<!-- footer container -->
-	<div id="footer-wrapper">
+	<div class="footer-wrapper">
 		<div class="v-divider"></div>s
 		<div id="footer-content">
 			<table id="footer-table">
 				<tr>
 					<td rowspan="2" id="footer-logo">
-						<img id="footer-logo-img" src="potato.png" /> <br/>
+						<img id="footer-logo-img" src="img/potato.png" /> <br/>
 						POTASIA
 					</td>
 					<td valign="top" class="col-contact">

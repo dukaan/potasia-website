@@ -18,11 +18,19 @@
     src: url(fonts/Lato-Bold.ttf); 
 } 
 
+table, td, tr {
+margin: 0;
+padding: 0;
+}
+
+
+
 html, body {
 	height: 100%;
 	width: 100%;
 	padding: 0;
 	margin: 0;
+	font-family: LatoLight;
 }
 
 .icon-button {
@@ -32,6 +40,60 @@ html, body {
 	background-size: 100%;
 	background-repeat: no-repeat;
 	cursor: pointer;
+}
+
+.overlay {
+	background-color: rgba(0, 0, 0, 0.2);
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+/*
+*********** ALL CONTENT *************
+*/
+
+.content-table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+.left-content-table {
+	font-family: LatoRegular;
+	font-size: 1.5em;
+	letter-spacing: 0.7em;
+	padding-top: 120px;
+	width: 400px;
+	text-align: right;
+}
+
+.right-content-table {
+	padding-top: 120px;
+	font-family: LatoLight;
+	font-size: 1.15em;
+	letter-spacing: 2px;
+}
+
+.last-right-content {
+	padding-bottom: 100px;
+}
+
+.with-background {
+	background-color: #f7f7f7;
+}
+
+#content-wrapper {
+	background-color: white;
+	padding-right: 50px;
+}
+
+
+.content-title {
+	margin-right: 50px;
+}
+
+.content-text {
+	margin-left: 50px;
 }
 
 /*
@@ -50,13 +112,6 @@ html, body {
 #header {
 	width: 100%;
 	height: 100%;
-}
-
-#overlay {
-	background-color: rgba(0, 0, 0, 0.3);
-	width: 100%;
-	height: 100%;
-	text-align: center;
 }
 
 #logo {
@@ -118,9 +173,11 @@ html, body {
 */
 
 #navigation {
+	z-index: 999;
 	font-family: LatoRegular;
 	position: fixed;
 	width: 100%;
+	height: 79px; /* navbar height */
 	min-width: 991px;
 	background: #f7f7f7;
 	left: 0;
@@ -129,8 +186,14 @@ html, body {
 }
 
 .nav-links {
+	height: 100%;
 	float: right;
-	padding: 30px 78px 30px 30px;
+	padding-right: 78px;
+}
+
+.link-wrapper-table {
+	height: 100%;
+	border-spacing: 0;
 }
 
 #nav-title-container {
@@ -140,7 +203,7 @@ html, body {
 	text-align: center;
 	color: white;
 	float: left;
-	height: 79px;
+	height: 79px; /* navbar height */
 	width: 400px;
 	background-color: #801010;
 }
@@ -158,6 +221,30 @@ html, body {
 	float: left;
 }
 
+.link-container {
+	height: 79px; /* navbar height */
+	display: inline-block;
+	-webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.link-container:hover {
+	background-color: #801010;
+	cursor: pointer;
+}
+
+.link-container:hover .arrow-down{
+	border-top-color: #801010;
+}
+
+.link-container:hover .nav-link{
+	color: white;
+}
+
+.active {
+	background-color: #ededed;
+}
+
 .nav-link {
 	text-decoration: none;
 	color: #3a3a3a;
@@ -167,10 +254,11 @@ html, body {
 	font-size: 0.8em;
 	-webkit-transition: all 0.2s;
     transition: all 0.2s;
+    padding-left: 5px; /* compensate letterspacing */
 }
 
 .nav-link:hover {
-	opacity: 0.5;
+	color: white;
 }
 
 .h-divider {
@@ -198,42 +286,151 @@ html, body {
 	background-image: url("img/facebook-icon-blue.png");
 }
 
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 48.5px solid transparent;
+	border-right: 48.5px solid transparent;
+	
+	border-top: 20px solid #ededed;
+	margin: 0 auto 0 auto;
+
+	opacity: 0;
+	-webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.on {
+	opacity: 1;
+}
+
 /*
-*********** CONTENT *************
+*********** HOME CONTENT *************
 */
 
+/*
+*********** HOME SLIDESHOW *************
+*/
 
-#content-wrapper {
-	background-color: white;
-	height: 100%;
-	padding-top: 200px;
-	padding-right: 50px;
+#slideshow-wrapper {
+	width: 100%;
+	margin-bottom: 100px;
 }
 
-.left-content {
+#slideshow-container {
+	margin: 0 auto 0 auto;
+	width: 3000px;
+	height: 1000px;
+	position: relative;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+#slides-container {
+	width: 3000px;
+	height: 1000px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	cursor: move;
+}
+
+div.gallery-descriptor-box {
+	text-align: center;
+	width: 40%;
+	height: 30%;
+	border: solid 2px white;
+	background-color: rgba(255, 255, 255, 0.2);
 	font-family: LatoRegular;
-	font-size: 1.5em;
-	letter-spacing: 0.7em;
-	width: 400px;
-	float: left;
-	text-align: right;
+	font-size: 2em;
+	letter-spacing: 0.5em;
+	color: white;
+	margin: 0 auto 0 auto;
 }
 
-.content-title {
-	margin-right: 50px;
+.gallery-descriptor {
+	margin: 0 auto 0 auto;
+	height: 100%;
+	padding-top: 30px;
+	opacity: 0;
+	-webkit-transition: all 0.4s;
+    transition: all 0.4s;
 }
 
-.right-content {
+.wrapper-table {
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	padding-top: 30px;
+	-webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.wrapper-table:hover {
+	opacity: 1;
+	padding-top: 0;
+}
+
+.wrapper-table:hover .gallery-descriptor {
+	opacity: 1;
+	padding-top: 0;
+}
+
+.gallery-subtitle {
 	font-family: LatoLight;
-	font-size: 1.3em;
-	max-width: calc(100% - 450px);
-	float: right;
+	letter-spacing: 2px;
 }
+
+.slide-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+	margin-top: -20px;
+	-webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.slide-overlay:hover {
+	margin-top: 0px;
+}
+
+/*
+*********** MENU CONTENT *************
+*/
+
+#menu-header {
+	margin-top: 79px; /* navigation bar height */
+	width: 100%;
+	min-width: 991px;
+	height: 500px;
+	background-image: url("img/menu_header.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: 0;
+}
+
+#menu-title {
+	text-align: right;
+	font-family: LatoRegular;
+	color: white;
+	font-size: 2.95em;
+	letter-spacing: 0.5em;
+	position: relative;
+	bottom: 100px;
+	right: 30px;
+	opacity: 0;
+}
+
 /*
 *********** FOOTER *************
 */
 
-#footer-wrapper {
+.footer-wrapper {
 	width: 100%;
 	height: 200px;
 	background-color: #303030;
@@ -296,3 +493,24 @@ html, body {
 	width: 30px;
 	height: 30px;
 }
+
+/*
+*********** JSSOR SLIDER ARROWS *************
+*/
+
+.jssora13l, .jssora13r {
+	display: block;
+	position: absolute;
+	/* size of arrow element */
+	width: 50px;
+	height: 70px;
+	cursor: pointer;
+	background: url(img/slider_arrows.png) no-repeat;
+	overflow: hidden;
+}
+.jssora13l { background-position: -10px -35px; }
+.jssora13r { background-position: -70px -35px; }
+.jssora13l:hover { background-position: -130px -35px; }
+.jssora13r:hover { background-position: -190px -35px; }
+.jssora13l.jssora13ldn { background-position: -250px -35px; }
+.jssora13r.jssora13rdn { background-position: -310px -35px; }
