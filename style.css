@@ -295,13 +295,13 @@ html, body {
 	border-top: 20px solid #ededed;
 	margin: 0 auto 0 auto;
 
-	opacity: 0;
+	display: none;
 	-webkit-transition: all 0.2s;
     transition: all 0.2s;
 }
 
 .on {
-	opacity: 1;
+	display: block;
 }
 
 /*
@@ -424,6 +424,48 @@ div.gallery-descriptor-box {
 	bottom: 100px;
 	right: 30px;
 	opacity: 0;
+}
+
+/*
+*********** GALLERY CONTENT *************
+*/
+
+.gallery-detail {
+	position: absolute;
+	top: 79px;
+	right: 20%;
+	height: calc(100% - 79px);
+	width: 1500px;
+	background-color: rgba(0, 0, 0, 0.4);
+	text-align: center;
+	color: white;
+}
+
+.gallery-detail-table {
+	height: 100%;
+	width: 100%;
+}
+
+.gallery-detail-caption {
+	font-family: LatoRegular;
+	font-size: 6em;
+	letter-spacing: 0.5em;
+	padding-left: 0.5em;
+}
+
+.gallery-detail-text {
+	font-size: 3.5em;
+	letter-spacing: 0.1em;
+}
+
+.small-separator {
+	margin-top: 100px;
+	margin-bottom: 100px;
+	width: 80%;
+	height: 3px;
+	background-color: white;
+	display: inline-block;
+	opacity: 0.7;
 }
 
 /*

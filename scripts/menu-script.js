@@ -3,6 +3,11 @@ $(document).ready(function() {
 		"opacity": "1"
 	});
 
+	$(".arrow-down").css({
+    	"border-left": $(".active").width()/2 + "px solid transparent",
+		"border-right": $(".active").width()/2 + "px solid transparent"
+    });
+
 	$("#menu-title").animate({
 		opacity: 1,
 		bottom: "140",
