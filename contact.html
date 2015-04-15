@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+ <title>Potasia Website</title>
+ <link rel="stylesheet" type="text/css" href="style.css">
+
+ <script src="scripts/jquery-1.11.2.min.js"></script>
+ <script src="scripts/contact-script.js"></script>
+
+ <!--  external libraries for parallax wallpaper and slideshow -->
+ <script src="scripts/parallax.min.js"></script>
+ <script type="text/javascript" src="scripts/jssor.js"></script>
+ <script type="text/javascript" src="scripts/jssor.slider.js"></script>
+ <script type="text/javascript" src="scripts/jquery.easie.js"></script>
+ <script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBQzyro31_Dc312zYZHpiuU3wwvmxsB3SM&sensor=FALSE">
+ </script>
+
+</head>
+
+<body>
+
+	<!-- navigation bar container -->
+	<div id="navigation">
+		<div id="nav-title-container">
+			<img id="logo-small" src="img/potato.png" />
+			<div id="nav-title">
+				POTASIA
+			</div>
+		</div>
+		<div class="nav-links">
+			<a href="index.html#content"><div class="link-container"><table valign="center" class="link-wrapper-table"><tr><td><a class="nav-link" href="index.html#content">HOME</a></td></tr></table><div class="arrow-down"></div></div></a><!--
+			--><a href="menu.html"><div class="link-container"><table valign="center" class="link-wrapper-table"><tr><td><a class="nav-link" href="menu.html">MENU</a></td></tr></table><div class="arrow-down"></div></div></a><!--
+			--><a href="gallery.html"><div class="link-container"><table valign="center" class="link-wrapper-table"><tr><td><a class="nav-link" href="gallery.html">GALLERY</a></td></tr></table><div class="arrow-down"></div></div></a><!--
+			--><a href="contact.html"><div class="link-container active"><table valign="center" class="link-wrapper-table"><tr><td><a class="nav-link" href="contact.html">CONTACT</a></td></tr></table><div class="arrow-down on"></div></div></a>
+		</div>
+		<div class="h-divider"></div>
+		<button id="fb-button" class="icon-button"></button>
+	</div>
+
+	<!-- content container -->
+
+	<div id="content-wrapper">
+		<div id="map-canvas">	
+		</div>
+		<div id="map-overlay">
+			<div id="map-description-container">
+			<span id="map-title">IM HERZEN M&Uuml;NCHENS</span><br />
+			<div class="big-separator"></div>
+			Sie finden uns in der M&uuml;nchener Altstadt. <br />
+			Zentral. Erreichbar.
+
+			</div>
+			<img id="map-marker" class="bounce animated" src="img/map_marker.png" />
+		</div>
+	</div>
+
+	<!-- footer container -->
+	<div class="footer-wrapper">
+		<div class="v-divider"></div>s
+		<div id="footer-content">
+			<table id="footer-table">
+				<tr>
+					<td rowspan="2" id="footer-logo">
+						<img id="footer-logo-img" src="img/potato.png" /> <br/>
+						POTASIA
+					</td>
+					<td valign="top" class="col-contact">
+						<span class="footer-table-title">KONTAKT</span> <br/>
+					</td>
+					<td valign="top" class="col-times">
+						<span class="footer-table-title"> &Ouml;FFNUNGSZEITEN</span>
+					</td>
+					<td valign="top">
+						<button id="footer-insta-btn" class="icon-button"></button>
+					</td>
+				</tr>
+				<tr>
+					<td valign="bottom" class="col-contact">
+						Tel. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1234 / 57 890 <br/>
+						E-Mail &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; potasia@online.de
+					</td>
+					<td valign="bottom" class="col-times">
+						Mo - Do &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11.00 - 21.00 <br/>
+						Fr - So &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11.00 - 24.00
+					</td>
+					<td valign="bottom">
+						<button id="footer-fb-btn" class="icon-button"></button>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+</body>
+
+</html>
