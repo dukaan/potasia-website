@@ -47,13 +47,71 @@
 		<div id="map-overlay">
 			<div id="map-description-container">
 			<span id="map-title">IM HERZEN M&Uuml;NCHENS</span><br />
-			<div class="big-separator"></div>
 			Sie finden uns in der M&uuml;nchener Altstadt. <br />
 			Zentral. Erreichbar.
 
 			</div>
 			<img id="map-marker" class="bounce animated" src="img/map_marker.png" />
+			<button id="down-arrow-button" class="icon-button"></button>
 		</div>
+	</div>
+
+	<div id="contact-form-container">
+		<table class="content-table" cellspacing="0">
+			<tr>
+				<td id="first-home-title" class="left-content-table less-padding" valign="top">
+					<div class="content-title">
+						SCHREIBEN
+						<p class="custom-p">
+						SIE UNS
+						</p>
+					</div>
+				</td>
+				<td class="right-content-table last-right-content less-padding" valign="top">
+					<table class="content-text">
+						<tr>
+							<td valign="top">
+								<span>Z&ouml;gern Sie nicht uns zu kontaktieren und lassen Sie uns jegliches <br />
+								Feedback zukommen.</span>
+								<form id="contact-form" action="#" method="POST" enctype="multipart/form-data">
+									<div class="row">
+										<input id="name" class="input small" name="name" type="text" value="" size="30"/><br />
+										<label class="label" for="name">Name</label><br />
+									</div>
+									<div class="row">
+										<input id="email" class="input small" name="email" type="text" value="" size="30" /><br />
+										<label class="label" for="email">E-Mail</label><br />
+									</div>
+									<div class="row">
+										<textarea id="message" class="input big" name="message" rows="7" cols="30"></textarea><br />
+										<label class="label" for="message">Nachricht</label><br />
+									</div>
+									<input id="submit_button" type="submit" value="SENDEN" />
+								</form>		
+							</td>
+							<td valign="top" id="contact-info">
+								<span class="contact-title"> TELEFON &amp; MAIL </span> <br />
+								<p>
+									0123 / 456 789 <br/>
+									potasia@online.de
+								</p>
+								<br/><span class="contact-title">ADRESSE </span> <br/>
+								<p>
+									Kapuziner Straße 123 <br/>
+									12345 M&uuml;nchen
+								</p>
+								<br/><span class="contact-title">&Ouml;FFNUNGSZEITEN </span>
+								<p>
+									Mo - Fr 12-10 Uhr <br />
+									Sa - So 12-10 Uhr
+								</p>
+							</td>
+						</tr>
+					</table>	
+				</td>
+			</tr>
+		</table>
+		
 	</div>
 
 	<!-- footer container -->

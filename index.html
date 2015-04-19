@@ -18,7 +18,8 @@
 <body>
 
 	<!-- parallax background container -->
-	<div id="background" class="parallax-window" data-parallax="scroll" data-image-src="img/header_background.jpg"></div>
+	<div id="background" class="parallax-window" data-parallax="scroll" data-image-src="img/header_background.jpg">
+	</div>
 
 	<!-- header/starting page container -->
 	<div id="header">
@@ -33,6 +34,13 @@
 					</div>
 
 					<button id="down-arrow-button" class="icon-button"></button>
+					<div id="extra-title">
+
+						NEUARTIGE FUSIONSK&Uuml;CHE
+						<p id="extra-title-small">Erleben Sie eine einzigartige Mischung aus asiatischer <br/>
+						und europ&auml;ischer Kultur.
+						Noch heute in M&uuml;nchen.</p>
+					</div>
 				</div>
 	</div>
 
@@ -59,16 +67,19 @@
 	<div id="content-wrapper">
 		<table class="content-table" cellspacing="0">
 			<tr>
-				<td class="left-content-table" valign="top">
+				<td id="first-home-title" class="left-content-table" valign="top">
 					<div class="content-title">
 						WAS IST
-						<p>
+						<p class="custom-p">
 						POTASIA?
 						</p>
 					</div>
+					<div id="custom-line-1" class="line"></div>
+					<div id="custom-line-2" class="line"></div>
+					<div id="custom-line-3" class="line"></div>
 				</td>
-				<td class="right-content-table last-right-content">
-					<div class="content-text">
+				<td class="right-content-table last-right-content" valign="top">
+					<div id="first-home-text" class="content-text">
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
 
 						<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
@@ -78,7 +89,73 @@
 				</td>
 			</tr>
 		</table>
+		
+		<div id="collage-container">
+			<img src="img/collage.png" id="collage-img" />
+			<div id="custom-line-4" class="line"></div>
+			<div id="custom-line-5" class="line"></div>
+			<div id="custom-line-6" class="line"></div>
+		</div>
+
+		<table class="content-table" cellspacing="0">
+			<tr>
+				<td class="right-content-table last-right-content as-left" valign="top">
+					<div class="content-text" id="second-home-text">
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+
+						<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+					</div>
+				</td>
+				<td class="left-content-table as-right" valign="top">
+					<div class="content-title">
+						WER SIND
+						<p class="custom-p">WIR?</p>
+					</div>
+					<div id="custom-line-7" class="line"></div>
+					<div id="custom-line-8" class="line"></div>
+					<div id="custom-line-9" class="line"></div>
+				</td>
+			</tr>
+		</table>
+		
 	</div>
+
+	<div class="bottom-table-container">
+		<table id="extra-info">
+			<tr>
+				<td class="extra-info">
+					<div>
+						<img class="extra-icon" src="img/map_icon.png" />
+					</div>
+				</td>
+				<td class="extra-info">
+					<div>
+						<img class="extra-icon" src="img/fb_icon.png" />
+					</div>
+				</td>
+				<td class="extra-info">
+					<div>
+						<img class="extra-icon" src="img/marker_icon.png" />
+					</div>
+				</td>
+			</tr>
+			<tr valign="top">
+				<td class="extra-info-text">
+					Du findest uns hier:
+					<p>Kapuziner Strasse 28<br/>
+					019283 M&uuml;nchen</p>
+				</td>
+				<td class="extra-info-text">
+					Schau bei unserem Facebook <br/>
+					vorbei und erfahre Neuigkeiten.
+				</td>
+				<td class="extra-info-text">
+					Du kannst bei unseren Partnern <br/>
+					online Essen bestellen.
+				</td>
+			</tr>
+		</table>
+		</div>
 
 	<!-- slideshow container realised with jssor slideshow -->
 	<div id="slideshow-wrapper">

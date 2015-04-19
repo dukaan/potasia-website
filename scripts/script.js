@@ -1,16 +1,31 @@
 var flag = true;
-var flag2 = true
+var flag2 = true;
 var lastScrollPos = 0;
 
 $(document).ready(function() {
 
 	// start view arrow button click
 	$('#down-arrow-button').click(function() {
-		$("html, body").animate({ scrollTop: $(window).height() - $("#navigation").height() }, 800);
+		$("html, body").animate({ scrollTop: $(window).height() - $("#navigation").height() - 300 }, 800);
 		setTimeout(function() {
 			$( "#navigation" ).fadeTo( 200 , 1, function() {
     			// Animation complete.
-  			});	
+  			});
+            $( "#logo" ).fadeTo( 200 , 0, function() {
+                // Animation complete.
+                 $( "#logo" ).css({
+                    "display" : "none"
+                 });
+            }); 
+            $( "#down-arrow-button" ).fadeTo( 200 , 0, function() {
+                // Animation complete.
+                $( "#logo" ).css({
+                    "display" : "none"
+                });
+            }); 
+            $( "#extra-title" ).fadeTo( 200 , 1, function() {
+                // Animation complete.
+            });	
 		}, 600);
 		flag = false;
 		flag2 = true;
@@ -58,9 +73,57 @@ $(document).ready(function() {
     }
     ScaleSlider();
 
+    function redrawLines() {
+        var height = $("#first-home-text").height();
+        var height2 = $("#second-home-text").height();
+        var windowWidth = $(window).width();
+
+        $("#custom-line-1").css({
+            "height" : height - 50
+        });
+
+        $("#custom-line-2").css({
+            "width" : windowWidth/2 - 255
+        });
+
+        $("#custom-line-3").css({
+            "margin-left" : $("#custom-line-2").width() + 224
+        });
+
+        $("#custom-line-4").css({
+            "margin-left" : $("#custom-line-2").width() + 224
+        });
+
+        $("#custom-line-5").css({
+            "margin-left" : $("#custom-line-2").width() + 224,
+            "width" : windowWidth/2 - 255
+        });
+
+        $("#custom-line-6").css({
+            "margin-left" : $("#custom-line-2").width() + 223 + $("#custom-line-5").width(),
+        });
+
+        $("#custom-line-7").css({
+            "height" : height2 - 25
+        });
+
+        $("#custom-line-8").css({
+            "width" : windowWidth/2 - 300,
+            "margin-left" : -(windowWidth/2 - 300 - 166)
+        });
+
+        $("#custom-line-9").css({
+            "margin-left" : -(windowWidth/2 - 300 - 166)
+        });
+    }
+
     $(window).bind("load", ScaleSlider);
     $(window).bind("resize", ScaleSlider);
     $(window).bind("orientationchange", ScaleSlider);
+
+    $(window).bind("load", redrawLines);
+    $(window).bind("resize", redrawLines);
+    $(window).bind("orientationchange", redrawLines);
     //responsive code end
 
     /*
@@ -81,11 +144,27 @@ $(document).on( 'scroll', function() {
 	if(lastScrollPos < curScrollPos) {
 		//scroll down
 		if(flag) {
-			$("html, body").animate({ scrollTop: $(window).height() - $("#navigation").height() }, 800);
+			$("html, body").animate({ scrollTop: $(window).height() - $("#navigation").height() - 300 }, 800);
 			setTimeout(function() {
 				$( "#navigation" ).fadeTo( 200 , 1, function() {
     			// Animation complete.
-  				});	
+  				});
+
+                $( "#logo" ).fadeTo( 200 , 0, function() {
+                    // Animation complete.
+                     $( "#logo" ).css({
+                        "display" : "none"
+                     });
+                }); 
+                $( "#down-arrow-button" ).fadeTo( 200 , 0, function() {
+                    // Animation complete.
+                    $( "#logo" ).css({
+                        "display" : "none"
+                    });
+                });
+                $( "#extra-title" ).fadeTo( 200 , 1, function() {
+                    // Animation complete.
+                });
 			}, 600);
 			flag = false;
 			flag2 = true;
@@ -96,16 +175,39 @@ $(document).on( 'scroll', function() {
 		console.log("content offset y" + $("#content-wrapper").offset().top);
 
 		if($("body").scrollTop() < ($("#content-wrapper").offset().top - 300) && flag2) { 	// -300 (threshold) to prevent early automated scrolling
-			$( "#navigation" ).fadeTo( 200 , 0, function() {
+			/*
+            $( "#navigation" ).fadeTo( 200 , 0, function() {
 	    		// Animation complete.
 	  		});
 			$("html, body").animate({ scrollTop: 0 }, 800, function() {
 				// completion handler
 			});
 			flag2 = false;
+            flag = true;
+            */
 		}
 
 		if( $('body').scrollTop() === 0) {
+            $( "#navigation" ).fadeTo( 200 , 0, function() {
+                // Animation complete.
+            });
+
+             $( "#logo" ).fadeTo( 200 , 1, function() {
+                // Animation complete.
+                 $( "#logo" ).css({
+                    "display" : "inline"
+                 });
+            }); 
+            $( "#down-arrow-button" ).fadeTo( 200 , 1, function() {
+                // Animation complete.
+                $( "#logo" ).css({
+                    "display" : "inline"
+                });
+            });
+
+            $( "#extra-title" ).fadeTo( 200 , 0, function() {
+                // Animation complete.
+            });
 			flag = true;
 		}
 	}

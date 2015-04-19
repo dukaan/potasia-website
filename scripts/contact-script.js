@@ -1,4 +1,25 @@
+var lastScrollPos = 0;
+var mapIsFixed = false;
+var flag = true;
+var flag2 = true;
+
 $(document).ready(function() {
+    // start view arrow button click
+    $('#down-arrow-button').click(function() {
+        $("html, body").animate({ scrollTop: $(window).height() - $("#navigation").height() - 400 }, 800);
+            $( "#map-overlay" ).fadeTo( 800 , 0, function() {
+                    // Animation complete.
+                $( "#map-overlay" ).css({
+                    "display" : "none"
+                });
+            });
+            setTimeout(function() {
+                $( "#navigation" ).fadeTo( 200 , 1, function() {
+                    // Animation complete.
+                });
+        }, 600);
+    });
+
 	$("#navigation").css({
 		"opacity": "1"
 	});
@@ -36,8 +57,9 @@ function initialize() {
     var styles = [
         {
             stylers: [
+            /*
                 { hue: "#801010" },
-                { saturation: -100 }
+                { saturation: -25 }*/
             ]
         },{
             featureType: "road",
@@ -80,10 +102,69 @@ function initialize() {
         position: new google.maps.LatLng(48.12781, 11.55615),
         animation: google.maps.Animation.BOUNCE,
         map: map,
-        title: "Quantuan"
+        title: "Potasia"
     });
 
     //Associate the styled map with the MapTypeId and set it to display.
     map.mapTypes.set('map_style', styledMap);
     map.setMapTypeId('map_style');
 }
+
+// full page scroll
+/*
+$(document).on('scroll', function() {
+
+        if($(window).scrollTop() > ($("#map-canvas").height() - 500) && !mapIsFixed) {
+            $("#content-wrapper").addClass('fixed-map');
+            $("#content-wrapper").css({
+                "top" : -($("#map-canvas").height() - 500)
+            });
+            $("#contact-form-container").css({
+                "margin-top" : $("#map-canvas").height() - 570
+            });
+            mapIsFixed = true;
+            $( "#map-overlay" ).fadeTo( 200 , 0, function() {
+                $( "#map-overlay" ).css({
+                    "display" : "none"
+                });
+            });
+            $(window).scrollTop(0);
+        }
+
+});*/
+
+// full page scroll
+$(document).on( 'scroll', function() {
+
+    var curScrollPos = $(this).scrollTop();
+    if(lastScrollPos < curScrollPos) {
+        //scroll down
+        if(flag) {
+            $("html, body").animate({ scrollTop: $(window).height() - $("#navigation").height() - 400 }, 800);
+            $( "#map-overlay" ).fadeTo( 800 , 0, function() {
+                    // Animation complete.
+                $( "#map-overlay" ).css({
+                    "display" : "none"
+                });
+            });
+            setTimeout(function() {
+                $( "#navigation" ).fadeTo( 200 , 1, function() {
+                    // Animation complete.
+                });
+            }, 600);
+            flag = false;
+            flag2 = true;
+        }
+    } else {
+        //scroll up
+
+        if( $('body').scrollTop() === 0) {
+            $( "#map-overlay" ).fadeTo( 200 , 1, function() {
+                    // Animation complete.
+                    initialize();
+            }); 
+            flag = true;
+        }
+    }
+    lastScrollPos = curScrollPos;
+});
